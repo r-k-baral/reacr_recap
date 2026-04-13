@@ -1,23 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import React from 'react'
 import './App.css'
 import Gopi from './gopi'
 import Sum from './Sum'
+import Todo from './components/TODO'
 
-function App() {
-  const result = Sum(5,3)
-  console.log(result)
-
+const App: React.FC = ()=>{ 
+  const result = Sum(10,20)
   return (
-    <> <h1>hello bhai</h1>
-    
-    <Gopi/>   
-    <h1>{ result }</h1>
-    
-    </>
-    
+  <div>
+  <h1>hello bhai kaisa ho {result}</h1>
+  <Todo/>
+  <Todo/>
+  <Todo/>
+</div>
   )
 }
 
