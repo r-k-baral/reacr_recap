@@ -3,6 +3,7 @@ import './App.css'
 import Gopi from './gopi'
 import Sum from './Sum'
 import Todo from './components/TODO'
+import Counter from './components/Counter'
 
 
 const mytodowark =[
@@ -23,14 +24,16 @@ const mytodowark =[
     title:"react "
   }
 ]
+
 const App: React.FC = ()=>{ 
   const result = Sum(10,20)
   return (
   <div>
   <h1>hello bhai kaisa ho {result}</h1>
   <Todo items={mytodowark} />
-  {/* <Todo/>
-  <Todo/> */}
+ <Counter/>
+ <Counter/>
+ <Counter/>
 </div>
   )
 }
