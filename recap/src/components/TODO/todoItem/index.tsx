@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css"
 
-const TodoItem: React.FC = ()=>{
+interface TodoItemProps {
+    title?: string;
+}
+const TodoItem: React.FC <TodoItemProps> = (props)=>{
     
     return(<li>
-        code
+        {props.title}
     </li>)
 }
  export default TodoItem;
