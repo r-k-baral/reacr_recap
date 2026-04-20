@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Gopi from './gopi'
 import Sum from './Sum'
@@ -26,16 +26,22 @@ const mytodowark =[
 ]
 
 const App: React.FC = ()=>{ 
+  const [state, setstate] = useState<Boolean>(true)
+  const [stateTwo, setstatetwo] = useState<Boolean>(true)
+  const [statethre, setstatethre] = useState<Boolean>(true)
   const result = Sum(10,20)
   return (
   <div>
   <h1>hello bhai kaisa ho {result}</h1>
   <Todo items={mytodowark} />
- <Counter/>
- <Counter/>
- <Counter/>
+ <button onClick={(e) => setstate(!state)}>Toggle</button>
+ {state ? <Counter/> : ""}
+ 
 </div>
+
   )
+
 }
+
 
 export default App

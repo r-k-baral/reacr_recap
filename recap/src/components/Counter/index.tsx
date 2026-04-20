@@ -1,8 +1,26 @@
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import "./style.css"
 
 const  Counter: React.FC =  (props) =>{
     const [counter, setcounter] = useState(0);
+    useEffect(()=>{
+        console.log("Counter mounted");
+        
+    },[])  // when ever component mount once run
+
+    useEffect(()=>{
+        console.log("user updated counter",counter);
+        
+    },[counter])   // runs when ever the state updates of of given counter dep
+
+
+    useEffect(()=>{
+        return function(){
+            console.log("unmount of counter ");
+            
+        }
+    },[])
+
     console.log("re-render again" , counter);
     const handleInc = ()=>{
         setcounter(counter +1)
