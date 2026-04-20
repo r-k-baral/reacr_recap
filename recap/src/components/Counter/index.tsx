@@ -15,8 +15,17 @@ const  Counter: React.FC =  (props) =>{
 
 
     useEffect(()=>{
+        console.log("user updated counter",counter);
+        return ()=>{
+            console.log("useeffect return counter",counter);
+            
+        }
+    },[counter]) 
+
+
+    useEffect(()=>{
         return function(){
-            console.log("unmount of counter ");
+            console.log("unmount of counter ");   // unmount   jab component u
             
         }
     },[])
